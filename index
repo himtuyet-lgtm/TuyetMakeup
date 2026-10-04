@@ -1,14 +1,15 @@
+<canvas id="index.html" title="Tuyết Makeup Academy Portfolio" type="HTML" tools="[]">
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuyết | Makeup Artist & Academy Portfolio</title>
+    <title>Tuyết Makeup Academy</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Font Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -19,22 +20,24 @@
         }
 
         :root {
-            --bg-dark: #0B0C0E;
-            --bg-card: #141518;
-            --bg-card-hover: #1C1E22;
-            --gold-primary: #E6C280;
-            --gold-light: #FFF0D0;
-            --text-bright: #FFFFFF;
-            --text-sub: #D1D5DB;
-            --text-muted: #9CA3AF;
-            --border-gold: rgba(230, 194, 128, 0.3);
+            --bg-light: #fff5f7;
+            --bg-card: #ffffff;
+            --bg-card-hover: #fff0f4;
+            --pink-primary: #d87093;
+            --pink-accent: #e0829d;
+            --pink-deep: #b84a6e;
+            --pink-soft: #fbebee;
+            --text-dark: #332228;
+            --text-sub: #664450;
+            --border-pink: #f2c2ce;
+            --border-strong: #d87093;
             --font-head: 'Cormorant Garamond', serif;
             --font-body: 'Montserrat', sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark) !important;
-            color: var(--text-bright) !important;
+            background-color: var(--bg-light) !important;
+            color: var(--text-dark) !important;
             font-family: var(--font-body);
             line-height: 1.6;
             overflow-x: hidden;
@@ -58,9 +61,9 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(11, 12, 14, 0.95);
+            background: rgba(255, 245, 247, 0.92);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-pink);
         }
 
         .nav-wrapper {
@@ -74,19 +77,19 @@
             font-family: var(--font-head);
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--gold-primary);
+            color: var(--pink-deep);
             letter-spacing: 2px;
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 30px;
         }
 
         .nav-menu a {
-            color: var(--text-bright);
-            font-weight: 500;
+            color: var(--text-dark);
+            font-weight: 600;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -94,28 +97,7 @@
         }
 
         .nav-menu a:hover {
-            color: var(--gold-primary);
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #E6C280 0%, #B8860B 100%);
-            color: #000000 !important;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(230, 194, 128, 0.2);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 194, 128, 0.4);
+            color: var(--pink-primary);
         }
 
         /* HERO SECTION */
@@ -125,14 +107,14 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(rgba(11, 12, 14, 0.8), rgba(11, 12, 14, 0.95)),
+            background: linear-gradient(rgba(255, 245, 247, 0.82), rgba(255, 240, 244, 0.92)),
                         url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600') center/cover no-repeat;
-            padding-top: 100px;
+            padding-top: 120px;
             padding-bottom: 60px;
         }
 
         .hero-sub {
-            color: var(--gold-primary);
+            color: var(--pink-deep);
             font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 4px;
@@ -143,16 +125,85 @@
         .hero-title {
             font-family: var(--font-head);
             font-size: 3.8rem;
-            color: var(--text-bright);
+            color: var(--pink-deep);
             line-height: 1.15;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--pink-deep);
+            letter-spacing: 1.5px;
+            padding: 10px 24px;
+            border: 1px solid var(--border-pink);
+            border-radius: 30px;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(216, 112, 147, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: var(--pink-primary);
+            color: #ffffff;
+            border-color: var(--pink-primary);
+            transform: translateY(-2px);
+        }
+
+        /* QR CODE DISPLAY */
+        .qr-wrapper {
+            margin-top: 10px;
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(216, 112, 147, 0.15);
+            border: 1px solid var(--border-pink);
+        }
+
+        .qr-card-title {
+            color: var(--pink-deep);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .qr-card-stk {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .qr-img {
+            width: 220px;
+            height: auto;
+            border-radius: 12px;
+            display: block;
         }
 
         .hero-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-sub);
             max-width: 700px;
-            margin: 0 auto 35px auto;
+            margin: 30px auto 0 auto;
         }
 
         /* SECTION STYLES */
@@ -166,7 +217,7 @@
         }
 
         .sec-subtitle {
-            color: var(--gold-primary);
+            color: var(--pink-deep);
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: 0.9rem;
@@ -177,90 +228,7 @@
         .sec-title {
             font-family: var(--font-head);
             font-size: 2.8rem;
-            color: var(--text-bright);
-        }
-
-        /* BEFORE & AFTER SHOWCASE */
-        .ba-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
-        }
-
-        .ba-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .ba-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .ba-photos {
-            display: flex;
-            height: 280px;
-            position: relative;
-        }
-
-        .ba-photo-box {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ba-photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .ba-tag {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            z-index: 5;
-        }
-
-        .tag-before {
-            background: rgba(0, 0, 0, 0.85);
-            color: var(--text-bright);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .tag-after {
-            background: var(--gold-primary);
-            color: #000;
-        }
-
-        .ba-divider {
-            width: 2px;
-            background: var(--bg-dark);
-            z-index: 4;
-        }
-
-        .ba-content {
-            padding: 22px;
-        }
-
-        .ba-heading {
-            font-family: var(--font-head);
-            font-size: 1.6rem;
-            color: var(--gold-light);
-            margin-bottom: 8px;
-        }
-
-        .ba-text {
-            color: var(--text-sub);
-            font-size: 0.9rem;
+            color: var(--pink-deep);
         }
 
         /* PORTFOLIO GALLERY */
@@ -273,22 +241,23 @@
         }
 
         .filter-btn {
-            background: transparent;
-            border: 1px solid var(--border-gold);
-            color: var(--text-sub);
-            padding: 8px 20px;
+            background: #ffffff;
+            border: 1px solid var(--border-pink);
+            color: var(--text-dark);
+            padding: 8px 24px;
             border-radius: 25px;
             cursor: pointer;
             font-family: var(--font-body);
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(216, 112, 147, 0.08);
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: var(--gold-primary);
-            color: #000;
-            font-weight: 700;
+            background: var(--pink-primary);
+            color: #ffffff;
+            border-color: var(--pink-primary);
         }
 
         .gallery-grid {
@@ -299,11 +268,12 @@
 
         .gallery-card {
             position: relative;
-            border-radius: 10px;
+            border-radius: 16px;
             overflow: hidden;
             aspect-ratio: 3/4;
             cursor: pointer;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid var(--border-pink);
+            box-shadow: 0 6px 20px rgba(216, 112, 147, 0.1);
         }
 
         .gallery-card img {
@@ -320,7 +290,7 @@
         .gallery-info {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 70%);
+            background: linear-gradient(to top, rgba(184, 74, 110, 0.9) 0%, transparent 70%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -334,7 +304,7 @@
         }
 
         .gallery-cat {
-            color: var(--gold-primary);
+            color: #ffe6ee;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -344,55 +314,64 @@
         .gallery-name {
             font-family: var(--font-head);
             font-size: 1.4rem;
-            color: var(--text-bright);
+            color: #ffffff;
         }
 
         /* SERVICES & PRICING */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .service-box {
             background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            padding: 40px 30px;
-            border-radius: 12px;
+            border: 1px solid var(--border-pink);
+            padding: 35px 25px;
+            border-radius: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(216, 112, 147, 0.08);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-box:hover {
             transform: translateY(-8px);
             background: var(--bg-card-hover);
+            border-color: var(--pink-primary);
+            box-shadow: 0 12px 30px rgba(216, 112, 147, 0.18);
+        }
+
+        .service-box.featured {
+            border: 2px solid var(--pink-primary);
+            background: #fffafa;
         }
 
         .service-icon {
-            font-size: 2.5rem;
-            color: var(--gold-primary);
-            margin-bottom: 20px;
+            font-size: 2.3rem;
+            color: var(--pink-primary);
+            margin-bottom: 18px;
         }
 
         .service-price {
             font-family: var(--font-head);
-            font-size: 2.2rem;
-            color: var(--gold-light);
+            font-size: 2rem;
+            color: var(--pink-deep);
             margin: 15px 0;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .service-list {
             list-style: none;
-            margin: 20px 0 30px 0;
+            margin: 20px 0 0 0;
             color: var(--text-sub);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .service-list li {
-            margin-bottom: 12px;
-            border-bottom: 1px dashed rgba(255,255,255,0.08);
+            margin-bottom: 10px;
+            border-bottom: 1px dashed var(--border-pink);
             padding-bottom: 8px;
+            color: var(--text-dark);
         }
 
         /* ABOUT SECTION */
@@ -404,9 +383,10 @@
         }
 
         .about-img {
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
-            border: 1px solid var(--border-gold);
+            border: 1px solid var(--border-pink);
+            box-shadow: 0 10px 30px rgba(216, 112, 147, 0.12);
         }
 
         .about-img img {
@@ -417,8 +397,8 @@
 
         .about-text h3 {
             font-family: var(--font-head);
-            font-size: 2.2rem;
-            color: var(--gold-primary);
+            font-size: 2.4rem;
+            color: var(--pink-deep);
             margin-bottom: 15px;
         }
 
@@ -429,61 +409,36 @@
             line-height: 1.7;
         }
 
-        /* BOOKING FORM */
-        .form-box {
-            max-width: 750px;
-            margin: 0 auto;
-            background: var(--bg-card);
-            border: 1px solid var(--border-gold);
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--gold-light);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 14px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(230, 194, 128, 0.2);
-            border-radius: 6px;
-            color: var(--text-bright);
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            outline: none;
-        }
-
-        .form-control:focus {
-            border-color: var(--gold-primary);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
         /* FOOTER */
         footer {
-            border-top: 1px solid var(--border-gold);
+            border-top: 1px solid var(--border-pink);
             padding: 40px 0;
             text-align: center;
-            background: #060708;
-            color: var(--text-muted);
+            background: #fce8ed;
+            color: var(--text-dark);
             font-size: 0.9rem;
+        }
+
+        .footer-info {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-info a {
+            color: var(--pink-deep);
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-info a:hover {
+            color: var(--pink-primary);
         }
 
         .socials {
@@ -494,13 +449,13 @@
         }
 
         .socials a {
-            color: var(--gold-primary);
+            color: var(--pink-deep);
             font-size: 1.4rem;
             transition: color 0.3s;
         }
 
         .socials a:hover {
-            color: var(--text-bright);
+            color: var(--pink-primary);
         }
 
         /* LIGHTBOX MODAL */
@@ -509,7 +464,8 @@
             position: fixed;
             inset: 0;
             z-index: 2000;
-            background: rgba(0,0,0,0.92);
+            background: rgba(51, 34, 40, 0.88);
+            backdrop-filter: blur(8px);
             justify-content: center;
             align-items: center;
             padding: 20px;
@@ -522,15 +478,16 @@
         .modal-img {
             max-width: 90%;
             max-height: 85vh;
-            border-radius: 8px;
-            border: 1px solid var(--gold-primary);
+            border-radius: 12px;
+            border: 2px solid var(--border-pink);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
         }
 
         .modal-close {
             position: absolute;
             top: 25px;
             right: 35px;
-            color: var(--text-bright);
+            color: #ffffff;
             font-size: 2.5rem;
             cursor: pointer;
         }
@@ -539,8 +496,7 @@
         @media (max-width: 768px) {
             .hero-title { font-size: 2.5rem; }
             .nav-menu { display: none; }
-            .about-flex, .form-row { grid-template-columns: 1fr; }
-            .ba-photos { height: 220px; }
+            .about-flex { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -551,97 +507,46 @@
         <div class="container nav-wrapper">
             <a href="#" class="logo">TUYẾT MAKEUP</a>
             <ul class="nav-menu">
-                <li><a href="#before-after">Trước & Sau</a></li>
                 <li><a href="#gallery">Bộ Sưu Tập</a></li>
-                <li><a href="#about">Về Tôi</a></li>
+                <li><a href="#about">Về Tuyết</a></li>
                 <li><a href="#services">Dịch Vụ</a></li>
-                <li><a href="#booking">Đặt Lịch</a></li>
             </ul>
-            <a href="#booking" class="btn-gold">Đặt Lịch Ngay</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <p class="hero-sub">Professional Makeup Artist & Educator</p>
-            <h1 class="hero-title">Tôn Vinh Vẻ Đẹp Tự Nhiên & Sang Trọng</h1>
-            <p class="hero-desc">Chuyên trang điểm Cô Dâu, Dự Tiệc Cao Cấp và Đào Tạo Học Viên Chuyên Nghiệp từ cơ bản đến nâng cao.</p>
-            <a href="#before-after" class="btn-gold" style="padding: 14px 36px;">Xem Tác Phẩm</a>
-        </div>
-    </section>
+            <p class="hero-sub">Senior Makeup Artist & Educator</p>
+            <h1 class="hero-title">Tuyết Makeup Academy</h1>
+            
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <a href="tel:0962280312" class="contact-link">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0962 280 312</span>
+                </a>
+                
+                <a href="https://facebook.com" target="_blank" class="contact-link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>Facebook: Hoàng Thị Tuyết</span>
+                </a>
 
-    <!-- Before & After Section (Side-by-Side) -->
-    <section id="before-after">
-        <div class="container">
-            <div class="sec-title-box">
-                <p class="sec-subtitle">Sự Biến Hóa Kỳ Diệu</p>
-                <h2 class="sec-title">Hình Ảnh Trước & Sau Makeup</h2>
-            </div>
-
-            <div class="ba-grid">
-                <!-- Card 1 -->
-                <div class="ba-card">
-                    <div class="ba-photos">
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600" alt="Mặt mộc trước makeup">
-                            <span class="ba-tag tag-before">BEFORE</span>
-                        </div>
-                        <div class="ba-divider"></div>
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Sau khi trang điểm cô dâu">
-                            <span class="ba-tag tag-after">AFTER</span>
-                        </div>
-                    </div>
-                    <div class="ba-content">
-                        <h3 class="ba-heading">Makeup Cô Dâu Trong Trẻo</h3>
-                        <p class="ba-text">Tạo lớp nền căng bóng bắt sáng, che phủ khuyết điểm hoàn hảo giữ vẻ đẹp tự nhiên.</p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="ba-card">
-                    <div class="ba-photos">
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=600" alt="Học viên trước trang điểm">
-                            <span class="ba-tag tag-before">BEFORE</span>
-                        </div>
-                        <div class="ba-divider"></div>
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600" alt="Học viên sau trang điểm">
-                            <span class="ba-tag tag-after">AFTER</span>
-                        </div>
-                    </div>
-                    <div class="ba-content">
-                        <h3 class="ba-heading">Bài Thực Hành Học Viên K15</h3>
-                        <p class="ba-text">Tác phẩm tone Tây cuốn hút do chính tay học viên thực hiện sau 1 tháng đào tạo.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="ba-card">
-                    <div class="ba-photos">
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600" alt="Khách trước makeup">
-                            <span class="ba-tag tag-before">BEFORE</span>
-                        </div>
-                        <div class="ba-divider"></div>
-                        <div class="ba-photo-box">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600" alt="Khách sau makeup tiệc">
-                            <span class="ba-tag tag-after">AFTER</span>
-                        </div>
-                    </div>
-                    <div class="ba-content">
-                        <h3 class="ba-heading">Makeup Dự Tiệc Sang Trọng</h3>
-                        <p class="ba-text">Nhấn mắt sâu quyến rũ kết hợp sắc môi đỏ đất thời thượng cho buổi tiệc tối.</p>
-                    </div>
+                <!-- Techcombank VietQR Code Card -->
+                <div class="qr-wrapper">
+                    <div class="qr-card-title">HOANG THI TUYET</div>
+                    <div class="qr-card-stk">5224 1120 03</div>
+                    <!-- Techcombank VietQR Image -->
+                    <img class="qr-img" src="https://img.vietqr.io/image/TCB-5224112003-compact2.png?accountName=HOANG%20THI%20TUYET" alt="Mã QR Techcombank HOANG THI TUYET">
                 </div>
             </div>
+
+            <p class="hero-desc">Chuyên gia trang điểm Cô Dâu, Dự Tiệc, Kỷ Yếu Cao Cấp & Đào Tạo Học Viên Chuyên Nghiệp/Cá Nhân. Tinh tế - Sang trọng - Rạng rỡ.</p>
         </div>
     </section>
 
     <!-- Portfolio Gallery -->
-    <section id="gallery" style="background: rgba(255,255,255,0.01);">
+    <section id="gallery">
         <div class="container">
             <div class="sec-title-box">
                 <p class="sec-subtitle">Portfolio</p>
@@ -653,11 +558,30 @@
                 <button class="filter-btn active" onclick="filterGallery('all', this)">Tất Cả</button>
                 <button class="filter-btn" onclick="filterGallery('bridal', this)">Cô Dâu</button>
                 <button class="filter-btn" onclick="filterGallery('party', this)">Dự Tiệc</button>
+                <button class="filter-btn" onclick="filterGallery('yearbook', this)">Make Tốt Nghiệp - Kỷ Yếu</button>
                 <button class="filter-btn" onclick="filterGallery('student', this)">Tác Phẩm Học Viên</button>
             </div>
 
             <!-- Gallery Grid -->
             <div class="gallery-grid">
+                <!-- User Uploaded Kỷ Yếu Image -->
+                <div class="gallery-card" data-cat="yearbook" onclick="showModal(this)">
+                    <img src="ky_yeu_real.jpg" alt="Makeup Kỷ Yếu Áo Dài Thực Tế">
+                    <div class="gallery-info">
+                        <span class="gallery-cat">Make Tốt Nghiệp - Kỷ Yếu</span>
+                        <h4 class="gallery-name">Nàng Thơ Áo Dài Kỷ Yếu</h4>
+                    </div>
+                </div>
+
+                <!-- User Uploaded Dự Tiệc Image -->
+                <div class="gallery-card" data-cat="party" onclick="showModal(this)">
+                    <img src="du_tiec_real.jpg" alt="Makeup Dự Tiệc Điệu Đà">
+                    <div class="gallery-info">
+                        <span class="gallery-cat">Dự Tiệc</span>
+                        <h4 class="gallery-name">Glamour Butterfly Makeup</h4>
+                    </div>
+                </div>
+
                 <div class="gallery-card" data-cat="bridal" onclick="showModal(this)">
                     <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Cô Dâu 1">
                     <div class="gallery-info">
@@ -666,11 +590,11 @@
                     </div>
                 </div>
 
-                <div class="gallery-card" data-cat="party" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=600" alt="Dự Tiệc 1">
+                <div class="gallery-card" data-cat="yearbook" onclick="showModal(this)">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600" alt="Kỷ Yếu 2">
                     <div class="gallery-info">
-                        <span class="gallery-cat">Dự Tiệc</span>
-                        <h4 class="gallery-name">Glamour Night</h4>
+                        <span class="gallery-cat">Make Tốt Nghiệp - Kỷ Yếu</span>
+                        <h4 class="gallery-name">Tone Cam Đào Ngọt Ngào</h4>
                     </div>
                 </div>
 
@@ -686,23 +610,7 @@
                     <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Cô Dâu 2">
                     <div class="gallery-info">
                         <span class="gallery-cat">Cô Dâu</span>
-                        <h4 class="gallery-name">Tone Cam Đào Ngọt Ngào</h4>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-cat="party" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600" alt="Dự Tiệc 2">
-                    <div class="gallery-info">
-                        <span class="gallery-cat">Dự Tiệc</span>
-                        <h4 class="gallery-name">Smokey Eyes Quyến Rũ</h4>
-                    </div>
-                </div>
-
-                <div class="gallery-card" data-cat="student" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600" alt="Học Viên 2">
-                    <div class="gallery-info">
-                        <span class="gallery-cat">Học Viên</span>
-                        <h4 class="gallery-name">Kỹ Thuật Nhấn Cầu Mắt</h4>
+                        <h4 class="gallery-name">Tone Tây Tinh Tế</h4>
                     </div>
                 </div>
             </div>
@@ -710,7 +618,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" style="background: rgba(255,240,244,0.5);">
         <div class="container">
             <div class="about-flex">
                 <div class="about-img">
@@ -718,16 +626,16 @@
                 </div>
                 <div class="about-text">
                     <p class="sec-subtitle">Về Tôi</p>
-                    <h3>Tuyết - Senior Makeup Artist</h3>
-                    <p>Với hơn 8 năm hoạt động trong ngành làm đẹp chuyên nghiệp, tôi luôn tâm niệm rằng makeup không phải là biến đổi bạn thành một người khác, mà là làm nổi bật những đường nét xinh đẹp nhất vốn có của bạn.</p>
-                    <p>Bên cạnh dịch vụ trang điểm, tôi dành trọn tâm huyết cho các khóa học đào tạo học viên từ cơ bản đến nâng cao, giúp các bạn trẻ vững bước trên con đường làm đẹp chuyên nghiệp.</p>
+                    <h3>Hoàng Thị Tuyết - Senior Artist</h3>
+                    <p>Với nhiều năm kinh nghiệm hoạt động trong ngành làm đẹp chuyên nghiệp, tôi luôn tâm niệm rằng trang điểm không chỉ dừng lại ở kỹ thuật, mà là nghệ thuật làm nổi bật khí chất và sự tự tin của từng khách hàng.</p>
+                    <p>Bên cạnh dịch vụ trang điểm cá nhân & cô dâu, Tuyết Makeup Academy tập trung giảng dạy các khóa đào tạo học viên cá nhân và chuyên nghiệp với lộ trình chuẩn mực, nhiệt tình và thực chiến 100%.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services & Pricing -->
-    <section id="services" style="background: rgba(255,255,255,0.01);">
+    <section id="services">
         <div class="container">
             <div class="sec-title-box">
                 <p class="sec-subtitle">Dịch Vụ & Khóa Học</p>
@@ -735,96 +643,57 @@
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Service 1: Makeup Dự Tiệc -->
                 <div class="service-box">
                     <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
-                    <h3 style="color: var(--text-bright);">Makeup Dự Tiệc</h3>
-                    <div class="service-price">1.200.000đ</div>
+                    <h3>Makeup Dự Tiệc</h3>
+                    <div class="service-price">500.000đ</div>
                     <ul class="service-list">
-                        <li>Trang điểm & Làm tóc tận nơi</li>
-                        <li>Sử dụng mỹ phẩm High-end</li>
-                        <li>Tặng kèm mi giả & kích mí</li>
-                        <li>Thực hiện trong 60 - 75 phút</li>
+                        <li>Trang điểm & Làm tóc theo yêu cầu</li>
+                        <li>Sử dụng mỹ phẩm chính hãng cao cấp</li>
+                        <li>Tặng kèm mi giả & kích mí chuẩn dáng</li>
+                        <li>Thực hiện tỉ mỉ trong 60 phút</li>
                     </ul>
-                    <a href="#booking" class="btn-gold">Đặt Lịch Ngay</a>
                 </div>
 
-                <!-- Service 2 -->
-                <div class="service-box" style="border-color: var(--gold-primary); background: #191B1F;">
-                    <i class="fa-solid fa-crown service-icon"></i>
-                    <h3 style="color: var(--text-bright);">Makeup Cô Dâu</h3>
-                    <div class="service-price">3.500.000đ</div>
-                    <ul class="service-list">
-                        <li>Trang điểm & Tạo kiểu tóc ngày cưới</li>
-                        <li>Tư vấn phong cách theo trang phục</li>
-                        <li>Dán kích mí & Mi gân trong cao cấp</li>
-                        <li>Tặng kèm dặm phấn trước giờ lễ</li>
-                    </ul>
-                    <a href="#booking" class="btn-gold">Đặt Lịch Ngay</a>
-                </div>
-
-                <!-- Service 3 -->
+                <!-- Service 2: Makeup Kỷ Yếu -->
                 <div class="service-box">
                     <i class="fa-solid fa-graduation-cap service-icon"></i>
-                    <h3 style="color: var(--text-bright);">Khóa Học Chuyên Nghiệp</h3>
-                    <div class="service-price">15.000.000đ</div>
+                    <h3>Makeup Kỷ Yếu</h3>
+                    <div class="service-price">500.000đ</div>
                     <ul class="service-list">
-                        <li>Thời gian học: 2.5 tháng (Bao nghề)</li>
-                        <li>Thực hành 80% trên mẫu thật</li>
-                        <li>Tặng bộ cọ trang điểm cao cấp</li>
-                        <li>Cấp chứng chỉ & Hỗ trợ việc làm</li>
+                        <li>Trang điểm tươi trẻ, bắt ảnh ngoài trời</li>
+                        <li>Tạo kiểu tóc phong cách học sinh, sinh viên</li>
+                        <li>Tặng mi giả & dán kích mí tự nhiên</li>
+                        <li>Giữ lớp nền bền đẹp suốt ngày chụp</li>
                     </ul>
-                    <a href="#booking" class="btn-gold">Đăng Ký Học</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Booking Section -->
-    <section id="booking">
-        <div class="container">
-            <div class="sec-title-box">
-                <p class="sec-subtitle">Liên Hệ</p>
-                <h2 class="sec-title">Đặt Lịch Dịch Vụ / Đăng Ký Học</h2>
-            </div>
+                <!-- Service 3: Makeup Cô Dâu -->
+                <div class="service-box featured">
+                    <i class="fa-solid fa-crown service-icon"></i>
+                    <h3>Makeup Cô Dâu</h3>
+                    <div class="service-price">2.000.000đ</div>
+                    <ul class="service-list">
+                        <li>Trang điểm & Tạo kiểu tóc ngày cưới</li>
+                        <li>Tư vấn phong cách hợp vóc dáng & trang phục</li>
+                        <li>Dán kích mí & Mi gân trong cao cấp</li>
+                        <li>Tặng dặm phấn & son trước giờ lên lễ</li>
+                    </ul>
+                </div>
 
-            <div class="form-box">
-                <form id="contactForm" onsubmit="submitForm(event)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Họ và Tên</label>
-                            <input type="text" class="form-control" placeholder="Nguyễn Văn A" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Số Điện Thoại</label>
-                            <input type="tel" class="form-control" placeholder="0901 234 567" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Dịch Vụ Quan Tâm</label>
-                            <select class="form-control" style="background: #1C1E22;" required>
-                                <option value="">-- Chọn Dịch Vụ --</option>
-                                <option value="party">Makeup Dự Tiệc</option>
-                                <option value="bridal">Makeup Cô Dâu</option>
-                                <option value="course_personal">Khóa Học Cá Nhân</option>
-                                <option value="course_pro">Khóa Học Chuyên Nghiệp</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Ngày Dự Kiến</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Ghi Chú Yêu Cầu</label>
-                        <textarea class="form-control" rows="4" placeholder="Nhập thời gian, địa điểm hoặc các yêu cầu chi tiết khác..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-gold" style="width: 100%; padding: 15px;">Gửi Yêu Cầu Đặt Lịch</button>
-                </form>
+                <!-- Service 4: Học Makeup Cá Nhân -->
+                <div class="service-box">
+                    <i class="fa-solid fa-user-graduate service-icon"></i>
+                    <h3>Học Makeup Cá Nhân</h3>
+                    <div class="service-price">1.500.000đ</div>
+                    <ul class="service-list">
+                        <li>Lộ trình chuẩn: 3 - 5 buổi học</li>
+                        <li>Hướng dẫn 1 - 1 tỉ mỉ từng thao tác</li>
+                        <li>Tài trợ toàn bộ mỹ phẩm trong quá trình học</li>
+                        <li>Học định hình lông mày, lớp nền & vẽ mắt cá nhân</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -838,13 +707,16 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="footer-info">
+                <a href="tel:0962280312"><i class="fa-solid fa-phone"></i> 0962 280 312</a>
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook: Hoàng Thị Tuyết</a>
+            </div>
             <div class="socials">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <p>&copy; 2026 Tuyết Makeup Academy. All rights reserved.</p>
+            <p>&copy; Tuyết Makeup Academy. All rights reserved.</p>
         </div>
     </footer>
 
@@ -876,13 +748,7 @@
         function closeModal() {
             document.getElementById('imageModal').classList.remove('active');
         }
-
-        // Form Submission
-        function submitForm(e) {
-            e.preventDefault();
-            alert('Gửi yêu cầu thành công! Tuyết sẽ liên hệ lại với bạn ngay trong thời gian sớm nhất.');
-            document.getElementById('contactForm').reset();
-        }
     </script>
 </body>
 </html>
+</canvas>
