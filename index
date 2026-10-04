@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glow & Grace | Makeup Artist & Academy Portfolio</title>
+    <title>Tuyết | Makeup Artist & Academy Portfolio</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* CSS RESET & VARIABLES */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -550,7 +549,7 @@
     <!-- Header / Navbar -->
     <header>
         <div class="container nav-wrapper">
-            <a href="#" class="logo">GLOW & GRACE</a>
+            <a href="#" class="logo">TUYẾT MAKEUP</a>
             <ul class="nav-menu">
                 <li><a href="#before-after">Trước & Sau</a></li>
                 <li><a href="#gallery">Bộ Sưu Tập</a></li>
@@ -719,7 +718,7 @@
                 </div>
                 <div class="about-text">
                     <p class="sec-subtitle">Về Tôi</p>
-                    <h3>Elena Nguyễn - Senior Makeup Artist</h3>
+                    <h3>Tuyết - Senior Makeup Artist</h3>
                     <p>Với hơn 8 năm hoạt động trong ngành làm đẹp chuyên nghiệp, tôi luôn tâm niệm rằng makeup không phải là biến đổi bạn thành một người khác, mà là làm nổi bật những đường nét xinh đẹp nhất vốn có của bạn.</p>
                     <p>Bên cạnh dịch vụ trang điểm, tôi dành trọn tâm huyết cho các khóa học đào tạo học viên từ cơ bản đến nâng cao, giúp các bạn trẻ vững bước trên con đường làm đẹp chuyên nghiệp.</p>
                 </div>
@@ -845,7 +844,7 @@
                 <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
             </div>
-            <p>&copy; 2026 Glow & Grace Makeup Academy. All rights reserved.</p>
+            <p>&copy; 2026 Tuyết Makeup Academy. All rights reserved.</p>
         </div>
     </footer>
 
@@ -881,7 +880,7 @@
         // Form Submission
         function submitForm(e) {
             e.preventDefault();
-            alert('Gửi yêu cầu thành công! Elena sẽ liên hệ lại với bạn ngay trong thời gian sớm nhất.');
+            alert('Gửi yêu cầu thành công! Tuyết sẽ liên hệ lại với bạn ngay trong thời gian sớm nhất.');
             document.getElementById('contactForm').reset();
         }
     </script>
