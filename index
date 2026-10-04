@@ -1,15 +1,12 @@
-<canvas id="index.html" title="Tuyết Makeup Academy Portfolio" type="HTML" tools="[]">
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuyết Makeup Academy</title>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -115,7 +112,7 @@
 
         .hero-sub {
             color: var(--pink-deep);
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 4px;
             margin-bottom: 15px;
@@ -124,12 +121,12 @@
 
         .hero-title {
             font-family: var(--font-head);
-            font-size: 3.8rem;
+            font-size: 2.8rem;
             color: var(--pink-deep);
             line-height: 1.15;
             margin-bottom: 25px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .contact-details {
@@ -227,7 +224,7 @@
 
         .sec-title {
             font-family: var(--font-head);
-            font-size: 2.8rem;
+            font-size: 2.3rem;
             color: var(--pink-deep);
         }
 
@@ -317,11 +314,12 @@
             color: #ffffff;
         }
 
-        /* SERVICES & PRICING */
+        /* SERVICES & PRICING - SỬA LỖI GIAO DIỆN BẢNG GIÁ */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
+            align-items: stretch;
         }
 
         .service-box {
@@ -332,6 +330,9 @@
             text-align: center;
             box-shadow: 0 8px 25px rgba(216, 112, 147, 0.08);
             transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-box:hover {
@@ -344,27 +345,55 @@
         .service-box.featured {
             border: 2px solid var(--pink-primary);
             background: #fffafa;
+            position: relative;
+        }
+
+        /* Thêm nhãn Phổ Biến cho gói nổi bật */
+        .service-box.featured::before {
+            content: "PHỔ BIẾN NHẤT";
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--pink-primary);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 1px;
         }
 
         .service-icon {
             font-size: 2.3rem;
             color: var(--pink-primary);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
+        .service-box h3 {
+            font-family: var(--font-head);
+            font-size: 1.6rem;
+            color: var(--pink-deep);
+            margin-bottom: 5px;
+        }
+
+        /* Đồng bộ kích thước giá tiền & tự động co giãn gọn gàng */
         .service-price {
             font-family: var(--font-head);
-            font-size: 2rem;
+            font-size: 1.7rem;
             color: var(--pink-deep);
             margin: 15px 0;
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .service-list {
             list-style: none;
-            margin: 20px 0 0 0;
+            margin: 10px 0 25px 0;
             color: var(--text-sub);
             font-size: 0.9rem;
+            text-align: left;
+            flex-grow: 1;
         }
 
         .service-list li {
@@ -372,6 +401,35 @@
             border-bottom: 1px dashed var(--border-pink);
             padding-bottom: 8px;
             color: var(--text-dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: var(--pink-primary);
+            font-weight: bold;
+        }
+
+        /* Nút Đặt lịch trong bảng giá */
+        .service-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 10px 0;
+            background: #ffffff;
+            color: var(--pink-deep);
+            border: 1px solid var(--pink-primary);
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover .service-btn,
+        .service-box.featured .service-btn {
+            background: var(--pink-primary);
+            color: #ffffff;
         }
 
         /* ABOUT SECTION */
@@ -397,7 +455,7 @@
 
         .about-text h3 {
             font-family: var(--font-head);
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             color: var(--pink-deep);
             margin-bottom: 15px;
         }
@@ -492,9 +550,8 @@
             cursor: pointer;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
+            .hero-title { font-size: 2.2rem; }
             .nav-menu { display: none; }
             .about-flex { grid-template-columns: 1fr; }
         }
@@ -536,12 +593,11 @@
                 <div class="qr-wrapper">
                     <div class="qr-card-title">HOANG THI TUYET</div>
                     <div class="qr-card-stk">5224 1120 03</div>
-                    <!-- Techcombank VietQR Image -->
-                    <img class="qr-img" src="https://img.vietqr.io/image/TCB-5224112003-compact2.png?accountName=HOANG%20THI%20TUYET" alt="Mã QR Techcombank HOANG THI TUYET">
+                    <img class="qr-img" src="https://img.vietqr.io/image/TCB-5224112003-compact2.png?accountName=HOANG%20THI%20TUYET" alt="Mã QR Techcombank HOANG THI TUYET" onerror="this.src='https://placehold.co/220x220/ffffff/332228?text=QR+Code'">
                 </div>
             </div>
 
-            <p class="hero-desc">Chuyên gia trang điểm Cô Dâu, Dự Tiệc, Kỷ Yếu Cao Cấp & Đào Tạo Học Viên Chuyên Nghiệp/Cá Nhân. Tinh tế - Sang trọng - Rạng rỡ.</p>
+            <p class="hero-desc">Chuyên gia trang điểm Cô Dâu, Dự Tiệc, Kỷ Yếu Cao Cấp & Đào Tạo Học Viên Chuyên Nghiệp/Cá Nhân.</p>
         </div>
     </section>
 
@@ -564,18 +620,16 @@
 
             <!-- Gallery Grid -->
             <div class="gallery-grid">
-                <!-- User Uploaded Kỷ Yếu Image -->
                 <div class="gallery-card" data-cat="yearbook" onclick="showModal(this)">
-                    <img src="ky_yeu_real.jpg" alt="Makeup Kỷ Yếu Áo Dài Thực Tế">
+                    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600" alt="Makeup Kỷ Yếu Áo Dài Thực Tế" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Makeup+Ky+Yeu'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Make Tốt Nghiệp - Kỷ Yếu</span>
                         <h4 class="gallery-name">Nàng Thơ Áo Dài Kỷ Yếu</h4>
                     </div>
                 </div>
 
-                <!-- User Uploaded Dự Tiệc Image -->
                 <div class="gallery-card" data-cat="party" onclick="showModal(this)">
-                    <img src="du_tiec_real.jpg" alt="Makeup Dự Tiệc Điệu Đà">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Makeup Dự Tiệc Điệu Đà" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Makeup+Du+Tiec'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Dự Tiệc</span>
                         <h4 class="gallery-name">Glamour Butterfly Makeup</h4>
@@ -583,7 +637,7 @@
                 </div>
 
                 <div class="gallery-card" data-cat="bridal" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Cô Dâu 1">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600" alt="Cô Dâu 1" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Bridal+Makeup'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Cô Dâu</span>
                         <h4 class="gallery-name">Phong Cách Hàn Quốc</h4>
@@ -591,7 +645,7 @@
                 </div>
 
                 <div class="gallery-card" data-cat="yearbook" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600" alt="Kỷ Yếu 2">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600" alt="Kỷ Yếu 2" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Ky+Yeu+2'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Make Tốt Nghiệp - Kỷ Yếu</span>
                         <h4 class="gallery-name">Tone Cam Đào Ngọt Ngào</h4>
@@ -599,7 +653,7 @@
                 </div>
 
                 <div class="gallery-card" data-cat="student" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600" alt="Học Viên 1">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600" alt="Học Viên 1" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Student+Work'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Học Viên</span>
                         <h4 class="gallery-name">Bài Kiểm Tra Cuối Khóa</h4>
@@ -607,7 +661,7 @@
                 </div>
 
                 <div class="gallery-card" data-cat="bridal" onclick="showModal(this)">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Cô Dâu 2">
+                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?q=80&w=600" alt="Cô Dâu 2" onerror="this.src='https://placehold.co/600x800/fbebee/b84a6e?text=Bridal+2'">
                     <div class="gallery-info">
                         <span class="gallery-cat">Cô Dâu</span>
                         <h4 class="gallery-name">Tone Tây Tinh Tế</h4>
@@ -634,7 +688,7 @@
         </div>
     </section>
 
-    <!-- Services & Pricing -->
+    <!-- Services & Pricing (Đã được sửa lại giao diện) -->
     <section id="services">
         <div class="container">
             <div class="sec-title-box">
@@ -645,54 +699,66 @@
             <div class="services-grid">
                 <!-- Service 1: Makeup Dự Tiệc -->
                 <div class="service-box">
-                    <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
-                    <h3>Makeup Dự Tiệc</h3>
-                    <div class="service-price">500.000đ</div>
-                    <ul class="service-list">
-                        <li>Trang điểm & Làm tóc theo yêu cầu</li>
-                        <li>Sử dụng mỹ phẩm chính hãng cao cấp</li>
-                        <li>Tặng kèm mi giả & kích mí chuẩn dáng</li>
-                        <li>Thực hiện tỉ mỉ trong 60 phút</li>
-                    </ul>
+                    <div>
+                        <i class="fa-solid fa-wand-magic-sparkles service-icon"></i>
+                        <h3>Makeup Dự Tiệc</h3>
+                        <div class="service-price">500K - 1TR</div>
+                        <ul class="service-list">
+                            <li>Trang điểm & Làm tóc theo yêu cầu</li>
+                            <li>Sử dụng mỹ phẩm chính hãng cao cấp</li>
+                            <li>Tặng kèm mi giả & kích mí chuẩn dáng</li>
+                            <li>Thực hiện tỉ mỉ trong 60 phút</li>
+                        </ul>
+                    </div>
+                    <a href="tel:0962280312" class="service-btn">Đặt Lịch Ngay</a>
                 </div>
 
                 <!-- Service 2: Makeup Kỷ Yếu -->
                 <div class="service-box">
-                    <i class="fa-solid fa-graduation-cap service-icon"></i>
-                    <h3>Makeup Kỷ Yếu</h3>
-                    <div class="service-price">500.000đ</div>
-                    <ul class="service-list">
-                        <li>Trang điểm tươi trẻ, bắt ảnh ngoài trời</li>
-                        <li>Tạo kiểu tóc phong cách học sinh, sinh viên</li>
-                        <li>Tặng mi giả & dán kích mí tự nhiên</li>
-                        <li>Giữ lớp nền bền đẹp suốt ngày chụp</li>
-                    </ul>
+                    <div>
+                        <i class="fa-solid fa-graduation-cap service-icon"></i>
+                        <h3>Makeup Kỷ Yếu</h3>
+                        <div class="service-price">500.000đ</div>
+                        <ul class="service-list">
+                            <li>Trang điểm tươi trẻ, bắt ảnh ngoài trời</li>
+                            <li>Tạo kiểu tóc phong cách học sinh, sinh viên</li>
+                            <li>Tặng mi giả & dán kích mí tự nhiên</li>
+                            <li>Giữ lớp nền bền đẹp suốt ngày chụp</li>
+                        </ul>
+                    </div>
+                    <a href="tel:0962280312" class="service-btn">Đặt Lịch Ngay</a>
                 </div>
 
                 <!-- Service 3: Makeup Cô Dâu -->
                 <div class="service-box featured">
-                    <i class="fa-solid fa-crown service-icon"></i>
-                    <h3>Makeup Cô Dâu</h3>
-                    <div class="service-price">2.000.000đ</div>
-                    <ul class="service-list">
-                        <li>Trang điểm & Tạo kiểu tóc ngày cưới</li>
-                        <li>Tư vấn phong cách hợp vóc dáng & trang phục</li>
-                        <li>Dán kích mí & Mi gân trong cao cấp</li>
-                        <li>Tặng dặm phấn & son trước giờ lên lễ</li>
-                    </ul>
+                    <div>
+                        <i class="fa-solid fa-crown service-icon"></i>
+                        <h3>Makeup Cô Dâu</h3>
+                        <div class="service-price">2.000.000đ</div>
+                        <ul class="service-list">
+                            <li>Trang điểm & Tạo kiểu tóc ngày cưới</li>
+                            <li>Tư vấn phong cách hợp vóc dáng & trang phục</li>
+                            <li>Dán kích mí & Mi gân trong cao cấp</li>
+                            <li>Tặng dặm phấn & son trước giờ lên lễ</li>
+                        </ul>
+                    </div>
+                    <a href="tel:0962280312" class="service-btn">Đặt Lịch Ngay</a>
                 </div>
 
                 <!-- Service 4: Học Makeup Cá Nhân -->
                 <div class="service-box">
-                    <i class="fa-solid fa-user-graduate service-icon"></i>
-                    <h3>Học Makeup Cá Nhân</h3>
-                    <div class="service-price">1.500.000đ</div>
-                    <ul class="service-list">
-                        <li>Lộ trình chuẩn: 3 - 5 buổi học</li>
-                        <li>Hướng dẫn 1 - 1 tỉ mỉ từng thao tác</li>
-                        <li>Tài trợ toàn bộ mỹ phẩm trong quá trình học</li>
-                        <li>Học định hình lông mày, lớp nền & vẽ mắt cá nhân</li>
-                    </ul>
+                    <div>
+                        <i class="fa-solid fa-user-graduate service-icon"></i>
+                        <h3>Học Makeup Cá Nhân</h3>
+                        <div class="service-price">1.500.000đ</div>
+                        <ul class="service-list">
+                            <li>Lộ trình chuẩn: 3 - 5 buổi học</li>
+                            <li>Hướng dẫn 1 - 1 tỉ mỉ từng thao tác</li>
+                            <li>Tài trợ toàn bộ mỹ phẩm trong quá trình học</li>
+                            <li>Học định hình lông mày, lớp nền & vẽ mắt</li>
+                        </ul>
+                    </div>
+                    <a href="tel:0962280312" class="service-btn">Đăng Ký Học</a>
                 </div>
             </div>
         </div>
@@ -746,9 +812,8 @@
         }
 
         function closeModal() {
-            document.getElementById('imageModal').classList.remove('active');
+            document.getElementById('imageModal'].classList.remove('active');
         }
     </script>
 </body>
 </html>
-</canvas>
